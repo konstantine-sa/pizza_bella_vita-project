@@ -1,13 +1,11 @@
-import Link from "next/link";
+import Header from "@/components/Layout/Header";
+import Hero from "@/components/Layout/Hero";
 
 export default function Home() {
   return (
     <>
-      <Link href={""}>Home</Link>
-      <Link href={""}>Menu</Link>
-      <Link href={""}>About</Link>
-      <Link href={""}>Contact</Link>
-      <Link href={""}>Login</Link>
+      <Header />
+      <Hero />
     </>
   );
 }
