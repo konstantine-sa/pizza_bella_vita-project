@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  min-height: 100vh;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Nav Links */
 .link-underline {
   border-bottom-width: 0;
   background-image: linear-gradient(transparent, transparent),
@@ -20,4 +29,42 @@
 .link-underline:hover {
   background-size: 100% 3px;
   background-position: 0 100%;
+}
+
+/* Hero */
+section.hero {
+  @apply grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  align-items: center;
+}
+
+/* input form */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  @apply my-4 w-full h-12;
+  @apply block px-5 py-2 rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-50 duration-300;
+  @apply opacity-80 text-stone-800 text-base font-bold;
+}
+
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="text"]:disabled {
+  @apply bg-gray-300;
+}
+
+.buttonGray {
+  @apply h-[42px] px-4 bg-gray-100  rounded-lg font-semibold text-base text-secondaryTitle 
+  hover:text-main hover:bg-gray-200 duration-150;
+}
+
+.buttonYellow {
+  @apply block;
+  @apply h-[42px] mt-6 px-10 bg-primary rounded-lg font-semibold text-base hover:text-white 
+  hover:bg-yellow-500 duration-150;
+}
+
+.buttonCardItemYellow {
+  @apply bg-primary rounded-lg h-9 px-6 py-1 text-white text-sm font-bold
+   hover:bg-yellow-500 duration-150;
 }

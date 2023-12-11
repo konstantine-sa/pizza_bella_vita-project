@@ -1,11 +1,11 @@
-import Header from "@/components/Layout/Header";
 import Hero from "@/components/Layout/Hero";
+import Main from "@/components/Layout/Home";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      {/* <Hero /> */}
+      <Hero />
+      <Main />
     </>
   );
 }

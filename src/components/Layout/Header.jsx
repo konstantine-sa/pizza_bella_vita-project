@@ -6,11 +6,10 @@ function Header() {
   return (
     <header className="">
       <div className="flex items-center">
-        <Image className="w-20" alt="logo Bild" src={logo}></Image>
-        {/* <Link className="font-semibold text-2xl text-main" href={""}>
-          {`Pizza `}
-          <span className="text-primary">Bella Vita</span>
-        </Link> */}
+        <Link href={"/"}>
+          <Image className="w-20" alt="logo Bild" src={logo}></Image>
+        </Link>
+
         <div className=" flex flex-col ml-14 mr-2 ">
           <div className="flex text-lg font-semibold ">
             <p className="mr-[6px]">Pizza-Lieferung</p>
@@ -22,12 +21,7 @@ function Header() {
             <p>ab 20 Minuten</p>
           </div>
         </div>
-        {/* <Link
-          className="ml-auto bg-primary text-main font-semibold px-8 py-2 rounded-full"
-          href={""}
-        >
-          Anmelden
-        </Link> */}
+
         <button className="flex justify-center items-center ml-auto w-40 h-[42px] bg-primary rounded-lg font-semibold">
           Warenkorb
           <div className="mx-2 w-0.5 h-[23px] bg-stone-800 rounded-[5px]" />
@@ -35,6 +29,12 @@ function Header() {
         </button>
       </div>
       <nav className="flex items-center gap-8 mt-5 text-main text-lg font-semibold ">
+        <Link
+          className="link link-underline link-underline-black text-black"
+          href={"/"}
+        >
+          Startseite
+        </Link>
         <Link
           className="link link-underline link-underline-black text-black"
           href={""}
@@ -67,7 +67,7 @@ function Header() {
         </Link>
         <Link
           className="link link-underline link-underline-black text-black"
-          href={""}
+          href={"/aboutus"}
         >
           Über&nbsp;uns
         </Link>
@@ -78,11 +78,16 @@ function Header() {
           Kontakt
         </Link>
         <Link
-          className="ml-auto mr-12 font-bold text-mainGray link link-underline link-underline-black text-black"
-          href={""}
+          className="ml-auto font-bold text-mainGray link link-underline link-underline-black text-black"
+          href={"/login"}
         >
           Anmelden
         </Link>
+
+        {/* admin nav */}
+        <nav className="font-bold text-mainGray link link-underline link-underline-black text-black">
+          <Link href={"/register"}>Registrieren</Link>
+        </nav>
       </nav>
     </header>
   );
